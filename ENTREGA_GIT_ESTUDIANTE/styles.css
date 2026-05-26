@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --azul: #174ea6;
+  --azul-oscuro: #0b2f63;
+  --verde: #1f7a4d;
+  --fondo: #f3f6fb;
+  --texto: #1f2937;
+  --texto-suave: #4b5563;
+  --borde: #d8e1ef;
+  --blanco: #ffffff;
+  --sombra: 0 14px 34px rgba(11, 47, 99, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.hero {
+  color: var(--blanco);
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--verde));
+  padding-bottom: 56px;
+}
+
+.nav {
+  width: min(1140px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.nav__links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav__links a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav__links a:hover,
+.nav__links a:focus {
+  text-decoration: underline;
+}
+
+.hero__contenido {
+  width: min(1140px, calc(100% - 32px));
+  margin: 42px auto 0;
+}
+
+.etiqueta {
+  margin: 0 0 8px;
+  color: var(--verde);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+.hero .etiqueta {
+  color: #c7f9dd;
+}
+
+h1 {
+  max-width: 920px;
+  margin: 0 0 16px;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 1.05;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.15;
+}
+
+main {
+  width: min(1140px, calc(100% - 32px));
+  margin: 28px auto;
+}
+
+.seccion {
+  margin-bottom: 28px;
+  padding: 28px;
+  background: var(--blanco);
+  border-radius: 22px;
+  box-shadow: var(--sombra);
+}
+
+.seccion__encabezado {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.boton {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  color: white;
+  background: var(--azul);
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton--claro {
+  color: var(--azul-oscuro);
+  background: white;
+}
+
+.tarjetas-contexto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.tarjetas-contexto article {
+  border: 1px solid var(--borde);
+  background: #fbfdff;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+  border: 1px solid var(--borde);
+  border-radius: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 820px;
+  background: white;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--borde);
+  text-align: left;
+}
+
+th {
+  background: #edf4ff;
+  color: var(--azul-oscuro);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+.seccion-pendiente {
+  border: 2px dashed #93c5fd;
+  background: #f8fbff;
+}
+
+.nota {
+  padding: 14px;
+  border-left: 5px solid var(--azul);
+  background: #eaf2ff;
+  border-radius: 12px;
+  color: var(--texto-suave);
+  font-weight: 700;
+}
+
+.footer {
+  padding: 26px;
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+@media (max-width: 860px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tarjetas-contexto {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion {
+    padding: 20px;
+  }
+
+  .boton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*
+  En la clase se agregarán aquí los estilos de la mejora incremental:
+  controles, tarjetas KPI, paneles de análisis y barras visuales.
+*/

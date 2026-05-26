@@ -1,0 +1,20 @@
+# Ignorar todo por defecto
+*
+
+# Permitir el propio .gitignore
+!.gitignore
+
+# Permitir la carpeta que sí debe subir el estudiante
+!ENTREGA_GIT_ESTUDIANTE/
+
+# Permitir únicamente los tres archivos del estudiante
+!ENTREGA_GIT_ESTUDIANTE/index.html
+!ENTREGA_GIT_ESTUDIANTE/styles.css
+!ENTREGA_GIT_ESTUDIANTE/script.js
+
+# Todo lo demás queda ignorado:
+# README_DOCENTE.md
+# evidencias
+# guías
+# plantillas
+# archivos temporales

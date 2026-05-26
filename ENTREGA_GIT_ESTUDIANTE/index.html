@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroDatos El Progreso | Proyecto base</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="logo" href="#inicio">AgroDatos</a>
+      <div class="nav__links">
+        <a href="#contexto">Contexto</a>
+        <a href="#datos">Datos</a>
+        <a href="#analisis">Análisis</a>
+      </div>
+    </nav>
+    <section class="hero__contenido">
+      <p class="etiqueta">Semana 12 · Proyecto base</p>
+      <h1>Datos rurales almacenados</h1>
+      <p>
+        Este sitio muestra registros de productos rurales. Durante la clase se
+        agregará una mejora incremental: un panel para analizar estos datos.
+      </p>
+      <a class="boton boton--claro" href="#datos">Ver datos actuales</a>
+    </section>
+  </header>
+
+  <main>
+    <section class="seccion" id="contexto" aria-labelledby="titulo-contexto">
+      <p class="etiqueta">Contexto</p>
+      <h2 id="titulo-contexto">Feria rural de la Vereda El Progreso</h2>
+      <p>
+        La comunidad tiene productos, productores, cantidades, precios y veredas
+        registradas. Por ahora el sitio solo muestra los datos en una tabla.
+      </p>
+      <div class="tarjetas-contexto">
+        <article>
+          <h3>Situación actual</h3>
+          <p>El sistema tiene datos almacenados y los muestra en una tabla.</p>
+        </article>
+        <article>
+          <h3>Problema</h3>
+          <p>La tabla permite ver datos, pero no ayuda a interpretarlos rápidamente.</p>
+        </article>
+        <article>
+          <h3>Mejora por construir</h3>
+          <p>Crear un panel que calcule indicadores y permita filtrar la información.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion" id="datos" aria-labelledby="titulo-datos">
+      <div class="seccion__encabezado">
+        <div>
+          <p class="etiqueta">Datos almacenados</p>
+          <h2 id="titulo-datos">Registros actuales</h2>
+          <p>
+            Esta tabla se genera desde JavaScript usando los datos almacenados
+            en el archivo <strong>script.js</strong>.
+          </p>
+        </div>
+      </div>
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Productor</th>
+              <th>Vereda</th>
+              <th>Cantidad</th>
+              <th>Precio unitario</th>
+              <th>Valor estimado</th>
+            </tr>
+          </thead>
+          <tbody id="tablaDatos"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="seccion seccion-pendiente" id="analisis" aria-labelledby="titulo-analisis">
+      <p class="etiqueta">Mejora incremental</p>
+      <h2 id="titulo-analisis">Panel de análisis pendiente</h2>
+      <p>
+        En esta zona se construirá paso a paso la mejora de la semana:
+        indicadores, filtros, resumen por categoría e interpretación automática.
+      </p>
+      <p class="nota">
+        Estado inicial: el panel todavía no analiza datos. El estudiante verá
+        la mejora cuando agregue HTML, CSS y JavaScript durante la clase.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>AgroDatos El Progreso · Proyecto base para entrega incremental</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
