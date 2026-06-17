@@ -80,17 +80,41 @@
       </div>
     </section>
 
-    <section class="seccion seccion-pendiente" id="analisis" aria-labelledby="titulo-analisis">
+    <section class="seccion seccion-analisis" id="analisis" aria-labelledby="titulo-analisis">
       <p class="etiqueta">Mejora incremental</p>
-      <h2 id="titulo-analisis">Panel de análisis pendiente</h2>
+      <h2 id="titulo-analisis">Panel de análisis de datos</h2>
       <p>
-        En esta zona se construirá paso a paso la mejora de la semana:
-        indicadores, filtros, resumen por categoría e interpretación automática.
+        En esta zona se construyen los indicadores, filtros, resumen por categoría y
+        una interpretación automática de los datos registrados.
       </p>
-      <p class="nota">
-        Estado inicial: el panel todavía no analiza datos. El estudiante verá
-        la mejora cuando agregue HTML, CSS y JavaScript durante la clase.
-      </p>
+      <div class="panel-analisis">
+        <div class="indicadores-grid" id="indicadores" aria-live="polite"></div>
+
+        <div class="panel-controles">
+          <div class="filtros" aria-label="Controles de filtrado">
+            <div class="filtro">
+              <label for="filtroCategoria">Categoría</label>
+              <select id="filtroCategoria">
+                <option value="">Todas</option>
+              </select>
+            </div>
+            <div class="filtro">
+              <label for="filtroEstado">Estado</label>
+              <select id="filtroEstado">
+                <option value="">Todos</option>
+              </select>
+            </div>
+            <div class="filtro filtro-buscar">
+              <label for="busquedaTexto">Buscar</label>
+              <input id="busquedaTexto" type="search" placeholder="Producto, productor o vereda" />
+            </div>
+          </div>
+
+          <div class="resumen-rapido" id="resumenCategorias" aria-live="polite"></div>
+        </div>
+
+        <aside class="interpretacion-panel" id="interpretacion" aria-live="polite"></aside>
+      </div>
     </section>
   </main>
 

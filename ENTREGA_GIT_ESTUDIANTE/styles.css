@@ -227,3 +227,143 @@ tr:last-child td {
   En la clase se agregarán aquí los estilos de la mejora incremental:
   controles, tarjetas KPI, paneles de análisis y barras visuales.
 */
+
+.panel-analisis {
+  display: grid;
+  gap: 22px;
+}
+
+.indicadores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.indicador {
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(23, 78, 166, 0.12);
+  box-shadow: 0 10px 24px rgba(23, 78, 166, 0.08);
+}
+
+.indicador h3 {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  color: var(--azul-oscuro);
+}
+
+.indicador p {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--texto);
+}
+
+.panel-controles {
+  display: grid;
+  gap: 18px;
+}
+
+.filtros {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.filtro {
+  display: grid;
+  gap: 8px;
+}
+
+.filtro label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--azul-oscuro);
+  font-weight: 700;
+}
+
+.filtro select,
+.filtro input {
+  width: 100%;
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: white;
+  color: var(--texto);
+  font-size: 0.95rem;
+}
+
+.filtro-buscar input {
+  min-width: 0;
+}
+
+.resumen-rapido {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.categoria-card {
+  padding: 18px;
+  border-radius: 20px;
+  background: #fbfdff;
+  border: 1px solid var(--borde);
+}
+
+.categoria-card h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: var(--azul-oscuro);
+}
+
+.categoria-card p {
+  margin: 4px 0;
+  color: var(--texto-suave);
+  font-size: 0.94rem;
+}
+
+.participacion {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--verde);
+}
+
+.interpretacion-panel {
+  padding: 22px;
+  border-radius: 24px;
+  background: #eef6ff;
+  border: 1px solid rgba(23, 78, 166, 0.14);
+}
+
+.interpretacion-panel::before {
+  content: "Interpretación automática";
+  display: block;
+  margin-bottom: 14px;
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 0.95rem;
+}
+
+.interpretacion-panel p {
+  margin: 0;
+  color: var(--texto);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 860px) {
+  .indicadores-grid,
+  .resumen-rapido,
+  .filtros {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-analisis {
+    gap: 18px;
+  }
+}
